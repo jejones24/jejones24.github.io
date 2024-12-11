@@ -3,7 +3,7 @@ const openai = new OpenAI({ apiKey: "sk-proj-OyrqHv9JEmbqh-BeZn5brtiS5" +
         "QsBy6t527Hp99rTTRjGKk3wuWTOMFYP7EQqTNBug6NO8rWR9gT3BlbkFJJO_xzVA-bDxEkSKrbSwWnI7HpkJEs6WLKflU-DhMSs9s3mwSbv" +
         "zXb2mthdPPjdL48GPO6qh5AA"});
 
-const initialQuestion = "Create an in depth, semester long curriculum for a 10th grade pre-algebra class."
+// const initialQuestion = "Create an in depth, semester long curriculum for a 10th grade pre-algebra class."
 
 async function curriculum (prompt) {
     let initialQuestion = prompt;
@@ -52,14 +52,14 @@ async function curriculum (prompt) {
     return firstOutput.choices[0].message["content"];
 
 }
-//
-// const form = document.getElementById("form");
-// const initialQuestion = form.elements['initialQuestion'];
-// form.addEventListener("submit", () => {
-//     const revisedQuestion = curriculum(initialQuestion)
-//     const revisedQuestionString = Promise.resolve(revisedQuestion)
-//     document.write(revisedQuestionString);
-// });
+
+const form = document.getElementById("form");
+const initialQuestion = form.elements['initialQuestion'];
+form.addEventListener("submit", () => {
+    const revisedQuestion = curriculum(initialQuestion)
+    const revisedQuestionString = Promise.resolve(revisedQuestion)
+    document.write(revisedQuestionString);
+});
 
 const revisedQuestion = curriculum(initialQuestion)
 const revisedQuestionString = Promise.resolve(revisedQuestion)
