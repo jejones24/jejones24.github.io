@@ -1,0 +1,101 @@
+.body {
+    background-color: wheat;
+}
+
+.addStudent {
+    background-color: #00006c;
+    border: 0;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    width: 35%;
+    border-radius: 12px;
+}
+
+.addStudent:hover {
+    background-color: #3e3e88;
+    color: white;
+}
+
+.studentList {
+    text-align: center;
+}
+
+.studentA {
+    background: white;
+    margin: auto
+}
+
+.studentADiv {
+    background: white;
+    margin: auto;
+    border-bottom: 2px solid #00006c;
+
+}
+
+.studentDivLeft {
+    width: 65%;
+    display: inline-block;
+}
+
+.studentDivRight {
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+    padding: 5px;
+    padding-right: 8px;
+}
+
+.studentB {
+    background: lightgray;
+    margin: auto
+}
+
+.studentBDiv {
+    background: lightgray;
+    margin: auto;
+    border-bottom: 2px solid #00006c;
+}
+
+.studentSubscreen {
+    background: wheat;
+    text-align: center;
+    border: 4px solid #00006c;
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display:flex;
+
+}
+
+.column {
+    flex: 50%;
+    background: wheat;
+    text-align: center;
+}
+
+
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.progA{
+    background-color: #00006c;
+    border: 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px;
+    border-radius: 100%;
+}

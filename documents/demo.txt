@@ -1,0 +1,248 @@
+Give me a 5 week-long, 12th grade level calculus class.
+Can you add an assessment in week 6 that covers the content from weeks 1-5?
+
+{
+  'Week 1': {
+    'Title': 'Introduction to Algebra',
+    'Topics': ['What is Algebra?', 'Variables and Constants', 'Algebraic Expressions'],
+    'Assignments': ['Read Chapter 1', 'Complete Practice Problems 1.1-1.5']
+  },
+  'Week 2': {
+    'Title': 'Solving Equations',
+    'Topics': ['One-Step Equations', 'Two-Step Equations', 'Solving Equations with Variables on Both Sides'],
+    'Assignments': ['Solve Worksheet 2.1', 'Prepare for Quiz on Solving Equations'],
+    'Assessments': ['Quiz on Solving Equations']
+  },
+  'Week 3': {
+    'Title': 'Inequalities',
+    'Topics': ['Understanding Inequalities', 'Graphing Inequalities', 'Compound Inequalities'],
+    'Assignments': ['Complete Inequality Worksheet', 'Graph Inequalities on a Number Line']
+  },
+  'Week 4': {
+    'Title': 'Functions and Relations',
+    'Topics': ['What is a Function?', 'Domain and Range', 'Evaluating Functions'],
+    'Assignments': ['Read Chapter 2', 'Function Matching Activity']
+  },
+  'Week 5': {
+    'Title': 'Linear Functions',
+    'Topics': ['Slope of a Line', 'Slope-Intercept Form', 'Graphing Linear Functions'],
+    'Assignments': ['Graphing Linear Functions Worksheet', 'Slope Calculation Problems'],
+    'Assessments': ['Project: Create a Function Poster']
+  },
+  'Week 6': {
+    'Title': 'Systems of Equations',
+    'Topics': ['Graphing Systems of Equations', 'Substitution Method', 'Elimination Method'],
+    'Assignments': ['Complete Worksheet on Systems of Equations', 'Prepare for Midterm Review']
+  },
+  'Week 7': {
+    'Title': 'Midterm Review',
+    'Topics': ['Review of Key Concepts', 'Practice Problems', 'Group Study Sessions'],
+    'Assessments': ['Midterm Exam']
+  },
+  'Week 8': {
+    'Title': 'Exponents and Polynomials',
+    'Topics': ['Laws of Exponents', 'Adding and Subtracting Polynomials', 'Multiplying Polynomials'],
+    'Assignments': ['Exponent Rules Worksheet', 'Polynomial Operations Worksheet']
+  },
+  'Week 9': {
+    'Title': 'Factoring Polynomials',
+    'Topics': ['Greatest Common Factor', 'Factoring Trinomials', 'Special Products'],
+    'Assignments': ['Complete Factoring Practice', 'Prepare for Quiz on Factoring'],
+    'Assessments': ['Quiz on Factoring Polynomials']
+  },
+  'Week 10': {
+    'Title': 'Rational Expressions',
+    'Topics': ['Simplifying Rational Expressions', 'Adding and Subtracting Rational Expressions', 'Multiplying and Dividing Rational Expressions'],
+    'Assignments': ['Complete Rational Expressions Worksheet']
+  },
+  'Week 11': {
+    'Title': 'Radicals',
+    'Topics': ['Simplifying Square Roots', 'Adding and Subtracting Radicals', 'Multiplying Radicals'],
+    'Assignments': ['Radical Operations Worksheet']
+  },
+  'Week 12': {
+    'Title': 'Quadratic Functions',
+    'Topics': ['Standard Form of Quadratic Functions', 'Graphing Quadratics', 'Finding the Vertex'],
+    'Assignments': ['Complete Quadratic Graphing Worksheet']
+  },
+  'Week 13': {
+    'Title': 'Applications of Quadratics',
+    'Topics': ['Solving Quadratics by Factoring', 'Using the Quadratic Formula', 'Real-world Applications'],
+    'Assignments': ['Project: Real-life Problem Solving with Quadratics']
+  },
+  'Week 14': {
+    'Title': 'Review and Final Exam Prep',
+    'Topics': ['Review of Entire Course', 'Practice Tests', 'Group Study'],
+    'Assessments': ['Final Exam']
+  },
+  'Week 15': {
+    'Title': 'Course Wrap-Up',
+    'Topics': ['Reflecting on Learning', 'Course Feedback', 'Celebrating Student Success'],
+    'Assignments': ['Complete Course Reflection']
+  }
+}
+Format the key-value pairs as such: {'Week X': {'Title': 'X', 'Topics': ['X', 'X', 'X'], 'Assignments':
+['X', 'X', 'X'], 'Assessments': ['X', 'X', 'X']}}, with 'X' characters being replaced with the actual content relevant
+to the prompt. If it you believe it would be more appropriate to leave out assignments or assessments on a given week, that is
+acceptable, but if you so choose to do that, leave the key-value pair out of the dictionary for that week, like
+removing 'Assessments': ['X', 'X', 'X'] from the example.
+
+Create a class for a week, unit, etc.
+Display message list, hidden message list
+Two Types of requests- initial request, to generate course, second type to make changes
+    True-false flag for first time
+
+Accepts image as input (Hormel institute, food labels)
+
+<button className="button" id="weekButton1" onClick={hideMainPanel1}>Week 1</button>
+
+<div id="weekPanel1" className="panel" hidden>
+    <h1>Week 1</h1>
+    <p>Title: Introduction to Algebra</p>
+    <p>Topics:</p>
+    <ul>
+        <li>Overview of Algebra concepts</li>
+        <li>Understanding variables, expressions, and equations</li>
+        <li>Simplifying algebraic expressions</li>
+    </ul>
+    <p>Assignments:</p>
+    <ul>
+        <li>Textbook Problems</li>
+        <li>Review Slides</li>
+    </ul>
+    <button className="button" id="backButton" onClick={goBack1}>Back</button>
+</div>
+
+<a className={"classCard"}>Demo Course 1<br/>1111111</a>
+
+    else if (x === 'Depth') {
+            const systemMessageD = {
+                role: "system",
+                content: "When fulfilling this query, reference the most recent key-value dictionary created. " +
+                    "Design a document to be returned as a string that can be written to a separate text file. " +
+                    "In the first line, specify which week it is for. The first line should look like: 'Week X' with" +
+                    " X being replaced with whatever week number it is. The second line should just be the title of" +
+                    " the document. The document from there on can be formatted in any way so long as it is " +
+                    "well-designed and is relevant to the prompt."
+            }
+            const apiRequestBodyD = {
+                "model": "gpt-4o-mini",
+                "messages": [
+                    systemMessageD,
+                    ...apiMessages // [message1, message2, message3, ...]
+                ]
+            }
+
+            await fetch("https://api.openai.com/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                    "Authorization": "Bearer " + API_KEY,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(apiRequestBodyD)
+            }).then((dataD) => {
+                return dataD.json();
+            }).then((dataD) => {
+                stringDict[4] = JSON.parse(dataD.choices[0].message.content);
+                console.log(stringDict[4]);
+                console.log(typeof stringDict[4]);
+                setMessages([...hiddenMessages, {
+                    message: stringDict[4],
+                    sender: "ChatGPT",
+                    direction: "incoming"
+                }]);
+
+
+                setMessages([...messages, {
+                    message: "The requested changes have been made. Let me know if I can help with anything else!",
+                    sender: "ChatGPT",
+                    direction: "incoming"
+                }])
+            });
+        }
+
+        else {
+            throw new Error("This model doesn't have the capability to perform this action yet.")
+        }
+    }
+
+{
+  "Week 1": {
+    "Title": "Introduction to Music Theory",
+    "Topics": ["Overview of Music Theory", "Staff and Notation", "Clefs and Ledger Lines"],
+    "Assignments": ["Read Chapter 1 from the textbook", "Complete notation exercises"]
+  },
+  "Week 2": {
+    "Title": "Rhythm and Meter",
+    "Topics": ["Understanding Rhythm", "Notes and Rests", "Time Signatures"],
+    "Assignments": ["Create a rhythm exercise using different note values", "Complete rhythm clapping exercise"]
+  },
+  "Week 3": {
+    "Title": "Scales and Key Signatures",
+    "Topics": ["Major and Minor Scales", "Circle of Fifths", "Key Signatures"],
+    "Assignments": ["Practice scales on your instrument", "Identify key signatures in various pieces"]
+  },
+  "Week 4": {
+    "Title": "Intervals",
+    "Topics": ["Defining Intervals", "Types of Intervals", "Recognizing Intervals by Ear"],
+    "Assignments": ["Interval identification worksheet", "Ear training exercises"
+    ]
+  },
+  "Week 5": {
+    "Title": "Chords and Harmony",
+    "Topics": ["Triads", "Seventh Chords", "Chord Progressions"],
+    "Assignments": ["Write out basic triads in different inversions", "Complete a chord progression exercise"],
+    "Assessments": ["Chord identifier test"]
+  },
+  "Week 6": {
+    "Title": "Melody Writing",
+    "Topics": ["Creating Melodies", "Melodic Contour", "Motifs and Phrases"],
+    "Assignments": ["Compose a short melody using diatonic notes", "Analyze a melody from a popular song"]
+  },
+  "Week 7": {
+    "Title": "Tonal Harmony",
+    "Topics": ["Functions of Chords", "Tension and Resolution", "Cadences"],
+    "Assignments": ["Write cadences for given scenarios", "Analyze harmonic functions in pieces"]
+  },
+  "Week 8": {
+    "Title": "Music Form and Structure",
+    "Topics": ["Common Forms in Music", "Binary and Ternary Forms", "Theme and Variations"],
+    "Assignments": ["Identify forms in selected works", "Create a simple ABA composition"]
+  },
+  "Week 9": {
+    "Title": "Dynamics and Articulation",
+    "Topics": ["Understanding Dynamics", "Articulatory Techniques", "Expression in Music"],
+    "Assignments": ["Notation exercise on dynamics", "Perform a passage with different articulations"]
+  },
+  "Week 10": {
+    "Title": "Texture and Instrumentation",
+    "Topics": ["Monophonic, Homophonic, and Polyphonic Textures", "Instrument Families", "Arranging for Instruments"],
+    "Assignments": ["Analyze texture in pieces", "Create an arrangement for a simple melody"]
+  },
+  "Week 11": {
+    "Title": "Introduction to Counterpoint",
+    "Topics": ["Basics of Counterpoint", "Melodic Independence", "Rules of Voice Leading"],
+    "Assignments": ["Write a two-voice counterpoint", "Analyze counterpoint examples"],
+    "Assessments": ["Midterm exam"]
+  },
+  "Week 12": {
+    "Title": "Music Notation Software",
+    "Topics": ["Using Notation Software", "Creating Scores Digitally", "File Formats and Sharing"],
+    "Assignments": ["Draft a piece using notation software", "Submit a digital score for review"]
+  },
+  "Week 13": {
+    "Title": "Analysis of Musical Works",
+    "Topics": ["Analytical Techniques", "Score Study", "Historical Context"],
+    "Assignments": ["Prepare an analysis of a selected piece", "Present findings to the class"]
+  },
+  "Week 14": {
+    "Title": "Preparation for Final Project",
+    "Topics": ["Project Guidelines", "Choosing a Topic", "Final Project Presentations"],
+    "Assignments": ["Submit final project proposal", "Begin project composition or analysis"]
+  },
+  "Week 15": {
+    "Title": "Final Project Presentations and Review",
+    "Topics": ["Showcasing Final Projects", "Course Review", "Feedback Sessions"],
+    "Assessments": ["Final Dictation Exam", "Final Theory Exam"]
+  }
+}

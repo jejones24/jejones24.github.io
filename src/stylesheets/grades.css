@@ -1,0 +1,35 @@
+.body {
+    background-color: wheat;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #00006c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 22px;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    width: 70%;
+}
+
+.dropdown {
+    text-align: center;
+}
+
+.gradePanel {
+    background-color: #E9E9E9;
+    border: 2px solid #00006c;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: auto;
+    border-radius: 12px;
+    width: 70%
+
+}
